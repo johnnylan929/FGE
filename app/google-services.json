@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1098466026728",
+    "firebase_url": "https://fgefirebaseproject.firebaseio.com",
+    "project_id": "fgefirebaseproject",
+    "storage_bucket": "fgefirebaseproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098466026728:android:763c3339e5e9798f",
+        "android_client_info": {
+          "package_name": "tw.lan.fge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098466026728-qei8ao62tc59ij99k64ga0n612psbe3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tw.lan.fge",
+            "certificate_hash": "A697277D99EE23495E04BDBF05E3A2FF2400FE0A"
+          }
+        },
+        {
+          "client_id": "1098466026728-3rudd479jqenmk4r4kpm43nfl8m34t78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmuHevQsyxDttHnw_dKGq-KEr8dF0ExA4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098466026728-3rudd479jqenmk4r4kpm43nfl8m34t78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

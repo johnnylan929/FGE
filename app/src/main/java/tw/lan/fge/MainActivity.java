@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+        Log.d("lan", "123");
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
 
@@ -28,13 +30,33 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
-                    startActivityForResult(new Intent(MainActivity.this, LoginActivity.class), 1);
                     Log.d("lan", "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
                     // User is signed out
+                    startActivityForResult(new Intent(MainActivity.this, LoginActivity.class), 1);
                     Log.d("lan", "onAuthStateChanged:signed_out");
                 }
             }
         };
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mAuthListener != null){
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAuth.signOut();
     }
 }
